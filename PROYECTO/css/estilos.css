@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "letra game";
+    src: url("./PressStart2P-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(./00000-1110354863.png);
+    background-position:center;
+    background-size:cover;
+    color: #000;
+    font-family: 'letra game','Roboto', sans-serif;
+}
+
+a{
+    color: #3a206c;
+    text-decoration: none;
+}
+
+a:hover {
+color: #115570;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1400px; /*ancho máximo de la página*/
+    margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
+    display: grid;
+    gap: 30px; /*nos ahorramos tenes que poner márgenes entre los elementos*/
+
+    /*3 columnas: contenido (con 2 widgets) + sidebar*/
+    grid-template-colums: repeat(4,1fr);
+
+    /*4 filas: header, contenido, widgets, footer*/
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado encabezado"
+                        ". presentacion presentacion ."
+                        "contenido contenido contenido contenido"
+                        "pie pie pie pie";
+}
+
+.contenedor > div,
+.contenedor .encabezado,
+.contenedor .presentacion,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .pie {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .encabezado{
+    height: 80px;
+    background-image: url(./00012-1265850182.png);
+    background-position:center;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-area: encabezado; 
+}
+.contenedor .presentacion{
+    height: 500px;
+    width: 800px;
+    background-image: url(./fondoContenido.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position:center;
+    background-size:cover;
+    grid-area: presentacion; 
+}
+
+
+.contenedor .contenido{
+
+    grid-area: contenido; 
+    color:#115570;
+}
+
+.contenedor .sidebar{
+    background: orange;
+    /*utilizamos flexbox para alinear el contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: sidebar; 
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2{
+    background: lightskyblue;
+    color: #000;
+    height: 100px;
+    /*utilizamos flexbox para alinear el contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1{
+    grid-area: widget-1; 
+}
+
+.contenedor .widget-2{
+    grid-area: widget-2; 
+}
+
+.contenedor .pie{
+    color: rgb(247, 37, 133);
+    height: 80px;
+    background-image: url(./00012-1265850182.png);
+    background-position:bottom;
+    background-size:cover;
+    grid-area: pie; 
+}
+
+.contenedor .pie .redes{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    margin: 20px;
+}
+    
+
+
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "sidebar sidebar sidebar"
+                             "widget-1 widget-1 widget-2"
+                             "pie pie pie";
+    }
+}
+
+@media screen and (max-width: 450px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "widget-1 widget-1 widget-1"
+                             "widget-2 widget-2 widget-2"
+                             "sidebar sidebar sidebar"
+                             "pie pie pie";
+    }
+}
