@@ -9,10 +9,18 @@
     margin: 0;
     padding: 0;
 }
+
+h1{
+    color:#22b3cc;
+    font-size: 4em;    
+}
+
+h6{
+    color:#f72585;
+    font-size: 1em;
+}
 body{
-    background-image: url(./00000-1110354863.png);
-    background-position:center;
-    background-size:cover;
+    background-color: #23035f;
     color: #000;
     font-family: 'letra game','Roboto', sans-serif;
 }
@@ -28,7 +36,7 @@ color: #115570;
 
 .contenedor{
     width: 90%;
-    max-width: 1400px; /*ancho máximo de la página*/
+    max-width: 1300px; /*ancho máximo de la página*/
     margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
     display: grid;
     gap: 30px; /*nos ahorramos tenes que poner márgenes entre los elementos*/
@@ -40,7 +48,7 @@ color: #115570;
     grid-template-rows: repeat(4, auto);
 
     grid-template-areas: "encabezado encabezado encabezado encabezado"
-                        ". presentacion presentacion ."
+                        "cuotas presentacion presentacion gamers"
                         "contenido contenido contenido contenido"
                         "pie pie pie pie";
 }
@@ -50,9 +58,19 @@ color: #115570;
 .contenedor .presentacion,
 .contenedor .contenido,
 .contenedor .sidebar,
-.contenedor .pie {
+.contenedor .pie
+.contenedor .gamers
+.contenedor .cuotas {
     padding: 20px;
     border-radius: 4px;
+}
+
+aside{
+    margin:auto;
+    font-size: 1.8rem;
+    color: #f72585;
+    
+    
 }
 
 .contenedor .encabezado{
@@ -67,13 +85,14 @@ color: #115570;
     grid-area: encabezado; 
 }
 .contenedor .presentacion{
+    margin: auto;
     height: 500px;
     width: 800px;
-    background-image: url(./fondoContenido.png);
+    background-image: url(./00000-1110354863.png);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content:space-between;
     background-position:center;
     background-size:cover;
     grid-area: presentacion; 
@@ -115,8 +134,12 @@ color: #115570;
 }
 
 .contenedor .pie{
-    color: rgb(247, 37, 133);
-    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: 5%;
+    color: #f72585;
+    height: 8em;
     background-image: url(./00012-1265850182.png);
     background-position:bottom;
     background-size:cover;

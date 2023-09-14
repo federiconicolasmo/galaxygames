@@ -1,13 +1,18 @@
-.color1 { #22b3cc };
-.color2 { #f45e61 };
-.color3 { #115570 };
-.color4 { #5a7fb0 };
-.color5 { #cbd7bb };
+.colores{
+    /* Paleta 1 */
+    color:#22b3cc;
+    color:#f45e61;
+    color:#115570;
+    color:#5a7fb0;
+    color:#cbd7bb;
 
-color:#cbd7bb
+    /* Paleta 2 */
 
-.color1 { #2c9fc4 };
-.color2 { #f464d4 };
-.color3 { #3a206c };
-.color4 { #55a2a4 };
-.color5 { #c5bdd5 };
+    color:#2c9fc4;
+    color:#f464d4;
+    color:#3a206c;
+    color:#55a2a4;
+    color:#c5bdd5;
+    color:#f72585;
+}
+
