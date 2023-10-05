@@ -69,7 +69,7 @@ aside{
     margin:auto;
     font-size: 1.8rem;
     color: #f72585;
-    
+    /* ESTO LO DEBERIAMOS ANIMAR */
     
 }
 
@@ -102,12 +102,12 @@ aside{
 .contenedor .contenido{
 
     grid-area: contenido; 
+    /* QUEDA PENDIENTE VER UNA FUENTE MAS CLARA DE LEER */
     color:#115570;
 }
 
 .contenedor .sidebar{
     background: orange;
-    /*utilizamos flexbox para alinear el contenido*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,7 +119,6 @@ aside{
     background: lightskyblue;
     color: #000;
     height: 100px;
-    /*utilizamos flexbox para alinear el contenido*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,6 +152,15 @@ aside{
     margin: 20px;
 }
     
+.contenedor a.iconoflotante{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 10%;
+    height: 10%;
+}
+
+
 
 
 
