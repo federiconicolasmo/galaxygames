@@ -21,7 +21,7 @@ h6{
 }
 body{
     background-color: #23035f;
-    color: #000;
+    color: #a63737;
     font-family: 'letra game','Roboto', sans-serif;
 }
 
@@ -36,7 +36,7 @@ color: #115570;
 
 .contenedor{
     width: 90%;
-    max-width: 1300px; /*ancho máximo de la página*/
+    max-width: 1700px; /*ancho máximo de la página*/
     margin: 20px auto; /*auto permite centrar nuestra página en forma horizontal*/
     display: grid;
     gap: 30px; /*nos ahorramos tenes que poner márgenes entre los elementos*/
@@ -74,7 +74,7 @@ aside{
 }
 
 .contenedor .encabezado{
-    height: 80px;
+    height: 100px;
     background-image: url(./00012-1265850182.png);
     background-position:center;
     background-size:cover;
@@ -86,8 +86,61 @@ aside{
 }
 .contenedor .presentacion{
     margin: auto;
-    height: 500px;
+    height: 700px;
     width: 800px;
+    background-image: url(./00000-1110354863.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    background-position:center;
+    background-size:cover;
+    grid-area: presentacion; 
+}
+
+.contenedor .presentacion-ps4{
+    margin: auto;
+    height: 600px;
+    width: 500px;
+    background-image: url(../img/ps4/doom.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: ;
+    justify-content:space-between;
+    background-position:center;
+    background-size:cover;
+    grid-area: presentacion; 
+}
+
+contenedor .presentacion-ps4.2{
+  
+    height: 600px;
+    width: 500px;
+    display: ;
+    flex-direction: column;
+    justify-content:space-between;
+    background-position:center;
+    background-size:cover; 
+}
+
+.contenedor .presentacion-ps5{
+    margin: auto;
+    height: 600px;
+    width: 500px;
+    background-image: url(../img/ps5/elden_ring.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    background-position:center;
+    background-size:cover;
+    grid-area: presentacion; 
+}
+
+.contenedor .formulario{
+    margin: auto;
+    height: 500px;
+    width: 700px;
     background-image: url(./00000-1110354863.png);
     display: flex;
     flex-direction: column;
@@ -104,6 +157,13 @@ aside{
     grid-area: contenido; 
     /* QUEDA PENDIENTE VER UNA FUENTE MAS CLARA DE LEER */
     color:#115570;
+}
+
+.contenedor .contenido-ps4{
+
+    grid-area: contenido; 
+    color:#115570;
+    font: 700;
 }
 
 .contenedor .sidebar{
@@ -164,7 +224,7 @@ aside{
 
 
 
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 600px){
     .contenedor{
         grid-template-areas: "encabezado encabezado encabezado"
                              "contenido contenido contenido"
@@ -174,7 +234,29 @@ aside{
     }
 }
 
-@media screen and (max-width: 450px){
+@media only screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "widget-1 widget-1 widget-1"
+                             "widget-2 widget-2 widget-2"
+                             "sidebar sidebar sidebar"
+                             "pie pie pie";
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "widget-1 widget-1 widget-1"
+                             "widget-2 widget-2 widget-2"
+                             "sidebar sidebar sidebar"
+                             "pie pie pie";
+    }
+}
+
+@media only screen and (max-width: 992px){
     .contenedor{
         grid-template-areas: "encabezado encabezado encabezado"
                              "contenido contenido contenido"
